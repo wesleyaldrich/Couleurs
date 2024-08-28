@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Colorizer</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Image Colorizer</h1>
+    </header>
+    <div class="container">
+        <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*" required>
+            <button type="submit">Upload and Colorize</button>
+        </form>
+        <div id="preview-container" class="image-preview" style="display: none;">
+            <img id="colorized-image" src="" alt="Colorized Image">
+            <a id="download-link" class="download-button" href="#" download>Download Colorized Image</a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Image Colorizer</p>
+    </footer>
+    <script>
+        document.getElementById('upload-form').onsubmit = async function(event) {
+            event.preventDefault();
+
+            let formData = new FormData(this);
+            let response = await fetch('/upload', {
+                method: 'POST',
+                body: formData
+            });
+
+            let imageUrl = await response.text();
+            let previewContainer = document.getElementById('preview-container');
+            let colorizedImage = document.getElementById('colorized-image');
+            let downloadLink = document.getElementById('download-link');
+
+            colorizedImage.src = imageUrl;
+            downloadLink.href = imageUrl;
+            previewContainer.style.display = 'block';
+        };
+    </script>
+</body>
+</html>
