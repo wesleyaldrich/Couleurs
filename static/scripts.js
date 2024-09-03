@@ -1,20 +1,20 @@
-document.getElementById('uploadForm').onsubmit = function(event) {
+document.getElementById('upload-form').onsubmit = async function(event) {
     event.preventDefault();
-    const formData = new FormData(this);
 
-    fetch('/upload', {
+    let formData = new FormData(this);
+    let response = await fetch('/upload', {
         method: 'POST',
         body: formData
-    })
-    .then(response => response.text())
-    .then(data => {
-        const preview = document.getElementById('preview');
-        const colorizedImage = document.getElementById('colorizedImage');
-        const downloadLink = document.getElementById('downloadLink');
+    });
 
-        colorizedImage.src = data;
-        downloadLink.href = data;
-        preview.style.display = 'block';
-    })
-    .catch(error => console.error('Error:', error));
-}
+    let imageUrl = await response.text();
+    let previewContainer = document.getElementById('preview-container');
+    let colorizedImage = document.getElementById('colorized-image');
+    let downloadLink = document.getElementById('download-link');
+    let uploadIcon = document.getElementById('upload-icon');
+
+    colorizedImage.src = imageUrl;
+    downloadLink.href = imageUrl;
+    previewContainer.style.display = 'flex';
+    uploadIcon.style.display = 'none';
+};

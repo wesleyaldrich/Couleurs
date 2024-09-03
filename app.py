@@ -31,7 +31,7 @@ def upload():
     # Colorize the image using DeOldify
     colorized_image = colorizer.get_transformed_image(
         path=file_path,
-        render_factor=35,  # Adjust render_factor for image quality
+        render_factor=30,  # Adjust render_factor for image quality
         watermarked=False  # Set to False to avoid watermark
     )
 

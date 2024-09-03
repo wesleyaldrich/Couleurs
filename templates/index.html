@@ -5,43 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Colorizer</title>
     <link rel="stylesheet" href="/static/styles.css">
+    <script defer src="/static/scripts.js"></script>
 </head>
 <body>
     <header>
-        <h1>Image Colorizer</h1>
+        <div class="logo">
+            <img src="/static/assets/logo.png" alt="Couleurs Logo">
+        </div>
+        <nav>
+            <div class="left">
+                HOME
+            </div>
+            <div class="mid">
+                ABOUT
+            </div>
+            <div class="right">
+                CONTACT
+            </div>
+        </nav>
+        <div class="mode-btn-container">
+
+        </div>
     </header>
-    <div class="container">
-        <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
-            <input type="file" name="image" accept="image/*" required>
-            <button type="submit">Upload and Colorize</button>
-        </form>
-        <div id="preview-container" class="image-preview" style="display: none;">
-            <img id="colorized-image" src="" alt="Colorized Image">
-            <a id="download-link" class="download-button" href="#" download>Download Colorized Image</a>
+    <div class="box-1">
+        <div class="left">
+            <img src="/static/assets/photo-box-1.png" alt="Photo">
+        </div>
+        <div class="right">
+            <h1>COULEURS</h1>
+            <p>IMAGE COLORIZER</p>
+            <div class="start-btn-container">
+                <button id="start-btn">TRY NOW</button>
+            </div>
         </div>
     </div>
+    <div class="box-2">
+
+    </div>
+    <div class="box-3">
+        <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+            <h1>COLORIZE YOUR IMAGE</h1>
+            <label for="file-input" class="upload-container">
+                <div id="upload-icon">
+                    <img src="/static/assets/upload-img.png">
+                    <div>Browse File</div>
+                </div>
+                <div id="preview-container" class="image-preview">
+                    <img id="colorized-image" src="" alt="Colorized Image">
+                    <a id="download-link" class="download-button" href="#" download>Download</a>
+                </div>
+            </label>
+            <input id="file-input" type="file" name="image" accept="image/*" required>
+            <button id="submit-btn" type="submit">COLORIZE</button>
+        </form>
+    </div>
+    
     <footer>
-        <p>&copy; 2024 Image Colorizer</p>
+        <p>&copy; 2024 Couleurs</p>
     </footer>
-    <script>
-        document.getElementById('upload-form').onsubmit = async function(event) {
-            event.preventDefault();
-
-            let formData = new FormData(this);
-            let response = await fetch('/upload', {
-                method: 'POST',
-                body: formData
-            });
-
-            let imageUrl = await response.text();
-            let previewContainer = document.getElementById('preview-container');
-            let colorizedImage = document.getElementById('colorized-image');
-            let downloadLink = document.getElementById('download-link');
-
-            colorizedImage.src = imageUrl;
-            downloadLink.href = imageUrl;
-            previewContainer.style.display = 'block';
-        };
-    </script>
 </body>
 </html>
