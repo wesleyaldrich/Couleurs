@@ -30,7 +30,7 @@ cd Couleurs
 - Download an AI Model Weights for our image colorizer.
 - In this project, we will use the Artistic Completed Generator Weights from DeOldify.<br>
   [Download Here](https://data.deepai.org/deoldify/ColorizeArtistic_gen.pth)
-- After it is downloaded, the file should be named `ColorizeArtistic_gen.pth`. Replace the dummy file in `Couleurs/ai/models/`!
+- After it is downloaded, the file should be named `ColorizeArtistic_gen.pth`. Replace the existing dummy file in `Couleurs/ai/models/`!
 - Thus, the file path for the model weights should be `Couleurs/ai/models/ColorizeArtistic_gen.pth`.
 
 ### Installing dependencies
