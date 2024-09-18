@@ -6,6 +6,7 @@ html{
     left: 7%;
 
 }
+
 #box-1{
     background-image: url(../assets/images/light-background.jpeg);
     background-repeat: no-repeat;
@@ -16,6 +17,7 @@ html{
     align-items: center;
 
 }
+
 #box-1-partition-1{
     height: 100%;
     width: 50%;
@@ -23,6 +25,7 @@ html{
     position: relative;
 
 }
+
 #box-1-partition-1 img{
     height: 83%;
 
@@ -30,6 +33,7 @@ html{
     right: 5%;
     bottom: 4%;
 }
+
 #box-1-partition-2{
     height: 100%;
     width: 50%;
@@ -41,6 +45,7 @@ html{
     position: relative;
 
 }
+
 #box-1-partition-2 h1{
     font-family: "Literata";
     font-size: 6rem;
@@ -51,6 +56,7 @@ html{
     background-clip: text;
 
 }
+
 #box-1-partition-2 h2{
     font-family: "Meera Inimai";
     font-size: 1rem;
@@ -63,6 +69,7 @@ html{
     color: var(--white-color);
 
 }
+
 #box-1-partition-2 a{
     height: 5%;
     width: 24%;
@@ -76,11 +83,13 @@ html{
 
     border-radius: 25px;
 }
+
 #box-2{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 #box-2 h1{
     font-family: "Literata";
     font-weight: 500;
@@ -88,12 +97,14 @@ html{
 
     margin-top: 5%;
 }
+
 #box-2-line{
     height: 2px;
     width: 10%;
 
     background-color: var(--orange-color);
 }
+
 .gallery-container{
     width: 80%;
     height: 70%;
@@ -104,6 +115,7 @@ html{
 
     border: 1px solid black;
 }
+
 .gallery-photo{
     height: 100%;
     width: 100%;
@@ -112,9 +124,11 @@ html{
     object-position: 50% 50%;
     position: absolute;
 }
+
 #gallery-img-2{
     clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
 }
+
 #color-slider{
     -webkit-appearance: none;
     appearance: none;
@@ -125,6 +139,7 @@ html{
     background-color: transparent;
     outline: none;
 }
+
 #color-slider::-webkit-slider-thumb{
     height: 40px;
     width: 40px;
@@ -136,6 +151,7 @@ html{
     background-position: center;
     cursor: pointer;
 }
+
 #color-slider::-moz-range-thumb{
     height: 60px;
     width: 60px;
@@ -146,8 +162,6 @@ html{
     background-position: center;
     cursor: pointer;
 }
-
-
 
 
 /*Untouched*/
@@ -206,8 +220,14 @@ html{
 }
 
 #upload-icon {
-    width: 15vw;
+    width: 50vw;
+    max-height: 90%;
+    gap: 2vh;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #upload-icon div {
@@ -220,11 +240,12 @@ html{
     font-size: 2rem;
     line-height: 2rem;
     height: 5vh;
+    width: 50%;
+    max-width: 175px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 
 #preview-container {
     width: 100%;
@@ -233,17 +254,23 @@ html{
     gap: 5%;
 }
 
+#colorized-image {
+    height: 75%;
+    width: 80%;
+    object-fit: contain;
+}
+
 #loading-gif {
     width: 50px;
     height: 50px;
     margin: 20px 0;
 }
 
-
-#colorized-image {
+.uploaded {
     height: 75%;
     width: 80%;
     object-fit: contain;
+    display: flex;
 }
 
 #download-link {
@@ -260,7 +287,11 @@ html{
     width: 10vw;
     display: flex;
     justify-content: center;
-    text-align: center;
+    align-items: center;
+}
+
+.download-button {
+    height: max-content;
 }
 
 #submit-btn {
@@ -279,19 +310,38 @@ html{
     cursor: pointer;
 }
 
+#loading-animation {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    z-index: 999;
+}
+
+#loading-layer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.4;
+    background-color: black;
+}
 
 
-
-
-/*darkmode*/
+/*Dark Mode*/
 #nav-index-link.darkmode{
     color: var(--brown-3-color);
 }
 
-
 #box-1-partition-2 a.darkmode{
     background-color: var(--cream-color);
 }
+
 #box-1.darkmode{
     background-image: none;
     background-color: var(--brown-1-color);
@@ -302,14 +352,15 @@ html{
     background-color: var(--grey-2-color);
 }
 
-
 #box-3.darkmode{
     background-image: none;
     background-color: var(--brown-1-color);
 }
+
 #box-2 h1.darkmode{
     color: var(--brown-1-color);
 }
+
 #box-2-line.darkmode{
     background-color: var(--brown-1-color);
 }

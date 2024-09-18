@@ -55,12 +55,14 @@
                 <h1>COLORIZE YOUR IMAGE</h1>
                 <label for="file-input" class="upload-container">
                     <div id="upload-icon">
-                        <img src="/static/assets/images/upload-img.png">
+                        <img id="preview-image" src="/static/assets/images/upload-img.png">
                         <div>Browse File</div>
                     </div>
                     <div id="preview-container" class="image-preview">
                         <img id="colorized-image" src="" alt="Colorized Image">
-                        <a id="download-link" class="download-button" href="#" download>Download</a>
+                        <a id="download-link" href="#" download>
+                            <div class="download-button">Download</div>
+                        </a>
                     </div>
                 </label>
                 <input id="file-input" type="file" name="image" accept="image/*" required>
@@ -68,5 +70,9 @@
             </form>
         </div>
     </main>
+    <div id="loading-animation">
+        <img src="/static/assets/animation/loading.gif" alt="Loading...">
+    </div>
+    <div id="loading-layer"></div>
     <footer>&copy; 2024 Couleurs</footer>
 </body>
