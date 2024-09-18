@@ -15,8 +15,9 @@
  - To simply learn how to use **Flask** framework in building simple web applications.
 
 # How to use
-  Clone this repository into your device, then run the **"app.py"** file from your terminal (e.g. "python app.py" for Windows, "python3 app.py" for Ubuntu).
-  If any error pops up, it might be because some required libraries are not in your device. Install all the dependencies that are "_unrecognized_".
+  Clone this repository into your device, then run the **"app.py"** file from your terminal.
+  If any error pops up, it might be because some required libraries are not in your device.
+  Install all the dependencies that are "_unrecognized_".
 
 ## Cloning this repository
 ``` bash
