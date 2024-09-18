@@ -3,65 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Colorizer</title>
-    <link rel="stylesheet" href="/static/styles.css">
-    <script defer src="/static/scripts.js"></script>
+    <meta http-equiv="X-UA-Compactible" content="IE=edge">
+    <title>Couleurs - HOME</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gurajada&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Meera+Inimai&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/index-style.css">
+    <script defer src="../static/js/script.js"></script>
+    <script defer src="../static/js/index-script.js"></script>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="/static/assets/logo.png" alt="Couleurs Logo">
+    <nav>
+        <a href="{{ url_for('index') }}" id="nav-logo-link">
+            <img src="{{ url_for('static', filename='assets/images/logo.png') }}" alt="Couleurs Logo">
+        </a>
+        <div id="nav-links-container">
+            <div id="current-nav"></div>
+            <a href="{{ url_for('index') }}" class="nav-link" id="nav-index-link">HOME</a>
+            <div class="nav-lines"></div>
+            <a href="{{ url_for('about') }}" class="nav-link" id="nav-about-link">ABOUT</a>
+            <div class="nav-lines"></div>
+            <a href="{{ url_for('contact') }}" class="nav-link" id="nav-contact-link">CONTACT</a>
         </div>
-        <nav>
-            <div class="left">
-                HOME
-            </div>
-            <div class="mid">
-                ABOUT
-            </div>
-            <div class="right">
-                CONTACT
-            </div>
-        </nav>
-        <div class="mode-btn-container">
-
+        <div id="dark-mode-toggle-container">
+            <input type="checkbox" id="dark-mode-status">
+            <label for="dark-mode-status" id="dark-mode-toggle"></label>
         </div>
-    </header>
-    <div class="box-1">
-        <div class="left">
-            <img src="/static/assets/photo-box-1.png" alt="Photo">
-        </div>
-        <div class="right">
-            <h1>COULEURS</h1>
-            <p>IMAGE COLORIZER</p>
-            <div class="start-btn-container">
-                <button id="start-btn">TRY NOW</button>
+    </nav>
+    <main>
+        <div class="box" id="box-1">
+            <div id="box-1-partition-1"><img src="../static/assets/images/index-box-1-photo-1.png" alt=""></div>
+            <div id="box-1-partition-2">
+                <h1>COULEURS</h1>
+                <h2>IMAGE COLORIZER</h2>
+                <a href="#box-3">TRY NOW</a>
             </div>
         </div>
-    </div>
-    <div class="box-2">
-
-    </div>
-    <div class="box-3">
-        <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
-            <h1>COLORIZE YOUR IMAGE</h1>
-            <label for="file-input" class="upload-container">
-                <div id="upload-icon">
-                    <img src="/static/assets/upload-img.png">
-                    <div>Browse File</div>
-                </div>
-                <div id="preview-container" class="image-preview">
-                    <img id="colorized-image" src="" alt="Colorized Image">
-                    <a id="download-link" class="download-button" href="#" download>Download</a>
-                </div>
-            </label>
-            <input id="file-input" type="file" name="image" accept="image/*" required>
-            <button id="submit-btn" type="submit">COLORIZE</button>
-        </form>
-    </div>
-    
-    <footer>
-        <p>&copy; 2024 Couleurs</p>
-    </footer>
+        <div class="box" id="box-2">
+            <h1>Colorization gallery</h1>
+            <div id="box-2-line"></div>
+            <div class="gallery-container">
+                <img class="gallery-photo" src="../static/assets/images/Gallery-Colour.jpg" alt="">
+                <img class="gallery-photo" id="gallery-img-2" src="../static/assets/images/Gallery-B&W.jpg" alt="">
+                <input type="range" min="0" max="100" value="50" id="color-slider" oninput="slide()">
+            </div>
+        </div>
+        <div class="box" id="box-3">
+            <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+                <h1>COLORIZE YOUR IMAGE</h1>
+                <label for="file-input" class="upload-container">
+                    <div id="upload-icon">
+                        <img src="/static/assets/images/upload-img.png">
+                        <div>Browse File</div>
+                    </div>
+                    <div id="preview-container" class="image-preview">
+                        <img id="colorized-image" src="" alt="Colorized Image">
+                        <a id="download-link" class="download-button" href="#" download>Download</a>
+                    </div>
+                </label>
+                <input id="file-input" type="file" name="image" accept="image/*" required>
+                <button id="submit-btn" type="submit">COLORIZE</button>
+            </form>
+        </div>
+    </main>
+    <footer>&copy; 2024 Couleurs</footer>
 </body>
-</html>

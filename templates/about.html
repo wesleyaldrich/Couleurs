@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compactible" content="IE=edge">
+    <title>Couleurs - ABOUT</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gurajada&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/about-style.css">
+    <script defer src="../static/js/script.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('index') }}" id="nav-logo-link">
+            <img src="{{ url_for('static', filename='assets/images/logo.png') }}" alt="Couleurs Logo">
+        </a>
+        <div id="nav-links-container">
+            <div id="current-nav"></div>
+            <a href="{{ url_for('index') }}" class="nav-link" id="nav-index-link">HOME</a>
+            <div class="nav-lines"></div>
+            <a href="{{ url_for('about') }}" class="nav-link" id="nav-about-link">ABOUT</a>
+            <div class="nav-lines"></div>
+            <a href="{{ url_for('contact') }}" class="nav-link" id="nav-contact-link">CONTACT</a>
+        </div>
+        <div id="dark-mode-toggle-container">
+            <input type="checkbox" id="dark-mode-status">
+            <label for="dark-mode-status" id="dark-mode-toggle"></label>
+        </div>
+    </nav>
+    <main>
+        <div class="box" id="box-1">
+            <h1 id="box-1-title-1">COULEURS</h1>
+            <h2 id="box-1-desc">Image Colorizer is our basic AI feature that could add color to black and white pictures naturally</h2>
+            <h1 id="box-1-title-2">HOW TO USE</h1>
+            <div id="box-1-container">
+                <div class="steps-container" id="step-1">
+                    <div class="step-pics" id="step-1-logo"></div>
+                    <div class="step-desc-container">
+                        <h1>STEP 1</h1>
+                        <h2>Upload Your Photos</h2>
+                    </div>
+                </div>
+                <div class="box-1-container-lines"></div>
+                <div class="steps-container" id="step-2">
+                    <div class="step-pics" id="step-2-logo"></div>
+                    <div class="step-desc-container">
+                        <h1>STEP 2</h1>
+                        <h2>Start Colorize</h2>
+                    </div>
+                </div>
+                <div class="box-1-container-lines"></div>
+                <div class="steps-container" id="step-3">
+                    <div class="step-pics" id="step-3-logo"></div>
+                    <div class="step-desc-container">
+                        <h1>STEP 3</h1>
+                        <h2>Preview and Download</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>&copy; 2024 Couleurs</footer>
+</body>

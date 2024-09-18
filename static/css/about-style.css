@@ -1,0 +1,163 @@
+
+
+#box-1{
+
+
+    background-image: url(../assets/images/light-background.jpeg);
+    background-repeat: no-repeat;
+    background-size: 125%;
+    background-position: top;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+#box-1-title-1{
+    font-family: "Literata";
+    font-size: 5rem;
+    font-weight: 600;
+
+    background: linear-gradient(to right, var(--linear-gradient-1-text-1), var(--linear-gradient-1-text-2));
+    color: transparent;
+    background-clip: text;
+
+}
+#box-1-desc{
+    height: 22%;
+    width: 55%;
+    padding-left: 7%;
+    padding-right: 7%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-family: "Inria Sans";
+    font-weight: 400;
+    font-size: 1.7rem;
+    color: var(--black-color);
+
+    background-color: rgba(255, 255, 255, 0.6);
+
+    border-radius: 45px;
+}
+#box-1-title-2{
+    font-family: "Inria Sans";
+    font-size: 2.2rem;
+    font-weight: 700;
+
+    background: linear-gradient(to right, var(--linear-gradient-2-text-1), var(--linear-gradient-2-text-2));
+    color: transparent;
+    background-clip: text;
+
+    position: relative;
+    top: 5%;
+}
+#box-1-container{
+    height: 15%;
+    width: 55%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--white-color);
+    border-radius: 100px;
+
+    position : relative;
+    top: 6%;
+}   
+.steps-container{
+    height: 80%;
+    width: 35%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.step-pics{
+    height: 75%;
+    width: 25%;
+    
+    background-size: cover;
+
+}
+#step-1-logo{
+    background-image: url(../assets/images/STEP1\ -\ colour.png);
+}
+#step-2-logo{
+    background-image: url(../assets/images/STEP2\ -\ colour.png);
+}
+#step-3-logo{
+    background-image: url(../assets/images/STEP3\ -\ colour.png);
+}
+.step-desc-container{
+    height: 75%;
+    width: 60%;
+    padding-left: 5%;
+
+    display: flex;
+    flex-direction: column;
+}
+.step-desc-container h1{
+    font-family: "Inria Sans";
+    font-weight: 700;
+    font-size: 1.6rem;
+
+
+    color: var(--orange-color);
+
+
+}
+.step-desc-container h2{
+    font-family: "Inria Sans";
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+.box-1-container-lines{
+    height: 60%;
+    width: 2px;
+
+    background-color: var(--orange-color);
+}
+
+
+/*darkmode*/
+#nav-about-link.darkmode{
+    color: var(--brown-3-color);
+}
+
+
+#box-1.darkmode{
+    background-image: none;
+    background-color: var(--brown-1-color);
+}
+#box-1-desc.darkmode{
+    background-color: var(--brown-4-color);
+    color: white;
+}
+#box-1-container.darkmode{
+    background-color: var(--brown-4-color);
+}
+#step-1-logo.darkmode{
+    background-image: url(../assets/images/STEP1\ -basic.png);
+}
+#step-2-logo.darkmode{
+    background-image: url(../assets/images/STEP2-\ basic.png);
+}
+#step-3-logo.darkmode{
+    background-image: url(../assets/images/STEP3\ -\ basic.png);
+}
+.step-desc-container h1.darkmode{
+    color: var(--white-color);
+}
+.step-desc-container h2.darkmode{
+    color: var(--white-color);
+}
+.box-1-container-lines.darkmode{
+    background-color: var(--cream-color);
+}

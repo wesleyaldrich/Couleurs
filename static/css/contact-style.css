@@ -1,0 +1,110 @@
+#current-nav{
+    right: 7%;
+}
+
+#box-1{
+    background-image: url(../assets/images/light-background.jpeg);
+    background-repeat: no-repeat;
+    background-size: 125%;
+    background-position: top;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+#group-photo{
+    width: 40%;
+
+    border-radius: 10px;
+
+    top: 5%;
+    position: relative;
+}
+#box-1 h1{
+    height: 5%;
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Inria Sans";
+    font-weight: 400;
+    font-size: 1.2rem;
+
+    position: relative;
+    top: 7%;
+    background-color: var(--white-color);
+    border-radius: 15px;
+}
+#socials-container{
+    height: 30%;
+    width: 20%;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    top: 8%;
+}
+.social-part{
+    height: 15%;
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+
+}
+.social-logo{
+    height: 100%;
+    width: 15%;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+#social-email{
+    background-image: url(../assets/images/email\ logo\ -\ colour.png);
+}
+#social-instagram{
+    background-image: url(../assets/images/IG\ logo\ -\ colour.png);
+}
+#social-phone{
+    background-image: url(../assets/images/call\ log\ -\ colour.png);
+}
+
+.social-part h2{
+    font-family: "Inria Sans";
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/*darkmode*/
+#nav-contact-link.darkmode{
+    color: var(--brown-3-color);
+}
+#box-1.darkmode{
+    background-image: none;
+    background-color: var(--brown-1-color);
+}
+#box-1 h1.darkmode{
+    color: var(--white-color);
+    background-color: var(--brown-4-color);
+    border-radius: 15px;
+}
+.social-part h2.darkmode{
+    color: var(--white-color);
+}
+#social-email.darkmode{
+    background-image: url(../assets/images/email\ logo\ -\ basic.png);
+}
+#social-instagram.darkmode{
+    background-image: url(../assets/images/IG\ logo\ -\ basic.png);
+}
+#social-phone.darkmode{
+    background-image: url(../assets/images/call\ logo\ -\ basic.png);
+}

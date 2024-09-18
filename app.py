@@ -12,7 +12,7 @@ warnings.filterwarnings("ignore", message="Arguments other than a weight enum or
 warnings.filterwarnings("ignore", message="torch.nn.utils.weight_norm is deprecated")
 
 # Initialize DeOldify model
-colorizer = get_image_colorizer(artistic=True)  # No device parameter
+colorizer = get_image_colorizer(artistic=True)
 
 # Ensure the directories exist
 os.makedirs('static/uploads', exist_ok=True)
@@ -21,6 +21,14 @@ os.makedirs('static/colorized', exist_ok=True)
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
 
 @app.route('/upload', methods=['POST'])
 def upload():
@@ -32,7 +40,7 @@ def upload():
     colorized_image = colorizer.get_transformed_image(
         path=file_path,
         render_factor=30,  # Adjust render_factor for image quality
-        watermarked=False  # Set to False to avoid watermark
+        watermarked=False
     )
 
     # Save the colorized image
@@ -46,4 +54,4 @@ def download(filename):
     return send_file(os.path.join('static/colorized', filename), as_attachment=True)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='127.0.0.1', port=8080)
