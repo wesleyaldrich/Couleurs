@@ -45,3 +45,8 @@ document.getElementById('file-input').addEventListener('change', function(event)
         reader.readAsDataURL(file);
     }
 });
+
+document.getElementById("refresh-link").addEventListener("click", function(event) {
+    event.preventDefault();
+    window.location.reload(); 
+});

@@ -273,6 +273,15 @@ html{
     display: flex;
 }
 
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 5vw;
+}
+
+#refresh-link,
 #download-link {
     text-decoration: none;
     background-color: white;
@@ -290,6 +299,7 @@ html{
     align-items: center;
 }
 
+.refresh-button,
 .download-button {
     height: max-content;
 }
