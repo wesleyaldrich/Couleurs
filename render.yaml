@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: couleurs
+    env: python
+    runtime: python3.7
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
