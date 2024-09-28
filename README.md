@@ -34,7 +34,12 @@ cd Couleurs
 - Thus, the file path for the model weights should be `Couleurs/ai/models/ColorizeArtistic_gen.pth`.
 
 ### Installing dependencies
-Install required libraries by running:
+If your Windows device is compatible with Python 3.7.6, you can install the required libraries perfectly by running:
+``` bash
+pip install -r requirements.txt
+```
+
+Otherwise, you can run this:
 ``` bash
 pip install flask matplotlib pandas scipy requests fastprogress torch torchvision opencv-python ffmpeg yt_dlp ipython
 ```
@@ -43,6 +48,8 @@ If you're using Linux/Ubuntu, you might also need:
 ``` bash
 sudo apt install libgl1-mesa-glx
 ```
+
+- Note: Consider using virtual environment as well.
 
 ### Run the web application
 - For Linux/Ubuntu:
