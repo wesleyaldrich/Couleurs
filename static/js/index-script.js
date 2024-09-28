@@ -5,18 +5,21 @@ function slide(){
 
 document.getElementById('upload-form').onsubmit = async function(event) {
     event.preventDefault();
+
     let loadingAnimation = document.getElementById('loading-animation');
     let loadingLayer = document.getElementById('loading-layer');
     loadingAnimation.style.display = 'block';
     loadingLayer.style.display = 'block';
 
     let formData = new FormData(this);
-    let response = await fetch('/upload', {
+    let response = await fetch('/api/images', {
         method: 'POST',
         body: formData
     });
 
-    let imageUrl = await response.text();
+    let data = await response.json();
+    let imageUrl = data.colorized_url;
+
     let previewContainer = document.getElementById('preview-container');
     let colorizedImage = document.getElementById('colorized-image');
     let downloadLink = document.getElementById('download-link');
