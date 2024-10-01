@@ -36,10 +36,15 @@ cd Couleurs
 ### Installing dependencies
 If your Windows device is compatible with Python 3.7.6, you can install the required libraries perfectly by running:
 ``` bash
-pip install -r requirements.txt
+pip install -r requirements_freeze.txt
 ```
 
 Otherwise, you can run this:
+``` bash
+pip install -r requirements.txt
+```
+
+Or manually by:
 ``` bash
 pip install flask matplotlib pandas scipy requests fastprogress torch torchvision opencv-python ffmpeg yt_dlp ipython
 ```
