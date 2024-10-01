@@ -1,0 +1,12 @@
+runtime: python39
+
+# The entry point for your application
+entrypoint: python app.py
+
+# Environment settings
+env: standard
+
+# Handlers for routing
+handlers:
+  - url: /.*
+    script: auto
